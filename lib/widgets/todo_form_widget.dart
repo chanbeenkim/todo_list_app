@@ -37,15 +37,9 @@ class TodoFormWidget extends StatelessWidget {
 
   Widget buildTitle() {
     return TextFormField(
-      maxLength: 1,
+      maxLines: 1,
       initialValue: title,
       onChanged: onChangedTitle,
-      validator: (title) {
-        if (title!.isEmpty) {
-          return "The title cannot be empty";
-        }
-        return null;
-      },
       decoration: const InputDecoration(
         border: UnderlineInputBorder(),
         labelText: "Title",
@@ -55,7 +49,7 @@ class TodoFormWidget extends StatelessWidget {
 
   Widget buildDescription() {
     return TextFormField(
-      maxLength: 3,
+      maxLines: 3,
       initialValue: description,
       onChanged: onChangedDescription,
       decoration: const InputDecoration(
