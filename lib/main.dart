@@ -1,6 +1,9 @@
+import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
+import 'package:kakao_flutter_sdk_user/kakao_flutter_sdk_user.dart';
 import 'package:logger/logger.dart';
 import 'package:provider/provider.dart';
+import 'package:todo_list_app/firebase_options.dart';
 import 'package:todo_list_app/provider/todos.dart';
 import 'package:todo_list_app/screens/login_screen.dart';
 
@@ -8,7 +11,12 @@ var logger = Logger(
   printer: PrettyPrinter(),
 );
 
-void main() {
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await Firebase.initializeApp(
+    options: DefaultFirebaseOptions.currentPlatform,
+  );
+  KakaoSdk.init(nativeAppKey: "3e2e1df325f6d7c9347b299a842985fe");
   runApp(const MyApp());
 }
 

@@ -41,6 +41,7 @@ dependencies:
   firebase_auth: ^4.15.3
   logger: ^2.0.2+1
   get: ^4.6.5
+  kakao_flutter_sdk_user: ^1.8.0
 
 dev_dependencies:
   flutter_test:
