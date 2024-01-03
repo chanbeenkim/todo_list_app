@@ -1,6 +1,6 @@
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
-import 'package:kakao_flutter_sdk_user/kakao_flutter_sdk_user.dart';
+import 'package:kakao_flutter_sdk_user/kakao_flutter_sdk_user.dart' as kakao;
 import 'package:logger/logger.dart';
 import 'package:provider/provider.dart';
 import 'package:todo_list_app/firebase_options.dart';
@@ -16,7 +16,7 @@ void main() async {
   await Firebase.initializeApp(
     options: DefaultFirebaseOptions.currentPlatform,
   );
-  KakaoSdk.init(nativeAppKey: "3e2e1df325f6d7c9347b299a842985fe");
+  kakao.KakaoSdk.init(nativeAppKey: "3e2e1df325f6d7c9347b299a842985fe");
   runApp(const MyApp());
 }
 

@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:todo_list_app/main.dart';
+import 'package:todo_list_app/model/kakao_login.dart';
+import 'package:todo_list_app/model/main_view_model.dart';
+import 'package:todo_list_app/screens/login_screen.dart';
 import 'package:todo_list_app/widgets/add_todo_dialog_widget.dart';
 
 import '../widgets/completed_list_widget.dart';
@@ -13,6 +16,7 @@ class HomeScreen extends StatefulWidget {
 }
 
 class _HomeScreenState extends State<HomeScreen> {
+  final viewmodel = MainViewModel(KakaoLogin());
   int selectedIndex = 0;
 
   @override
@@ -26,6 +30,23 @@ class _HomeScreenState extends State<HomeScreen> {
         elevation: 0,
         backgroundColor: Theme.of(context).primaryColor,
         title: const Text(MyApp.title),
+        actions: [
+          IconButton(
+            onPressed: () async {
+              await viewmodel.logout();
+              setState(() {
+                Navigator.of(context).push(
+                  MaterialPageRoute(
+                    builder: (context) => const LoginScreen(),
+                  ),
+                );
+              });
+            },
+            icon: const Icon(
+              Icons.logout,
+            ),
+          ),
+        ],
       ),
       bottomNavigationBar: BottomNavigationBar(
         backgroundColor: Theme.of(context).primaryColor,
