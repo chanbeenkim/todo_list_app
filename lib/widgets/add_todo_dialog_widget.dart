@@ -28,7 +28,7 @@ class _AddTodoDialogWidgetState extends State<AddTodoDialogWidget> {
             "Add Todo",
             style: TextStyle(
               fontWeight: FontWeight.bold,
-              fontSize: 22,
+              fontSize: 20,
             ),
           ),
           const SizedBox(

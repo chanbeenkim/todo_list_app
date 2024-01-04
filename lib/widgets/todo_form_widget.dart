@@ -41,8 +41,20 @@ class TodoFormWidget extends StatelessWidget {
       initialValue: title,
       onChanged: onChangedTitle,
       decoration: const InputDecoration(
-        border: UnderlineInputBorder(),
+        enabledBorder: UnderlineInputBorder(
+          borderSide: BorderSide(
+            color: Colors.grey,
+          ),
+        ),
+        focusedBorder: UnderlineInputBorder(
+          borderSide: BorderSide(
+            color: Colors.black,
+          ),
+        ),
         labelText: "Title",
+        labelStyle: TextStyle(
+          color: Colors.black,
+        ),
       ),
     );
   }
@@ -53,8 +65,20 @@ class TodoFormWidget extends StatelessWidget {
       initialValue: description,
       onChanged: onChangedDescription,
       decoration: const InputDecoration(
-        border: UnderlineInputBorder(),
+        enabledBorder: UnderlineInputBorder(
+          borderSide: BorderSide(
+            color: Colors.grey,
+          ),
+        ),
+        focusedBorder: UnderlineInputBorder(
+          borderSide: BorderSide(
+            color: Colors.black,
+          ),
+        ),
         labelText: "Description",
+        labelStyle: TextStyle(
+          color: Colors.black,
+        ),
       ),
     );
   }
@@ -65,7 +89,7 @@ class TodoFormWidget extends StatelessWidget {
       child: ElevatedButton(
         style: ButtonStyle(
           backgroundColor: MaterialStateProperty.all(
-            Colors.black,
+            Colors.blueGrey[800],
           ),
         ),
         onPressed: onSavedTodo,

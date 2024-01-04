@@ -5,7 +5,7 @@ import 'package:logger/logger.dart';
 import 'package:provider/provider.dart';
 import 'package:todo_list_app/firebase_options.dart';
 import 'package:todo_list_app/provider/todos.dart';
-import 'package:todo_list_app/screens/login_screen.dart';
+import 'package:todo_list_app/screens/home_screen.dart';
 
 var logger = Logger(
   printer: PrettyPrinter(),
@@ -23,7 +23,7 @@ void main() async {
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
-  static const String title = "Todo App";
+  static const String title = "Todo List";
 
   @override
   Widget build(BuildContext context) => ChangeNotifierProvider(
@@ -32,10 +32,10 @@ class MyApp extends StatelessWidget {
           debugShowCheckedModeBanner: false,
           title: title,
           theme: ThemeData(
-            primaryColor: Colors.amber,
+            primaryColor: Colors.blueGrey[800],
             scaffoldBackgroundColor: Colors.white,
           ),
-          home: const LoginScreen(),
+          home: const HomeScreen(),
         ),
       );
 }

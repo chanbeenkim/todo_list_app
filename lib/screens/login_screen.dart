@@ -1,7 +1,7 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:todo_list_app/model/kakao_login.dart';
+import 'package:todo_list_app/model/kakao_login_model.dart';
 import 'package:todo_list_app/model/main_view_model.dart';
 import 'package:todo_list_app/screens/home_screen.dart';
 

@@ -15,7 +15,8 @@ class TodoListWidget extends StatelessWidget {
             child: Text(
               "No Todos.",
               style: TextStyle(
-                fontSize: 20,
+                fontSize: 16,
+                fontWeight: FontWeight.bold,
               ),
             ),
           )

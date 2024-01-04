@@ -16,7 +16,8 @@ class CompletedListWidget extends StatelessWidget {
             child: Text(
               "No completed tasks.",
               style: TextStyle(
-                fontSize: 20,
+                fontSize: 16,
+                fontWeight: FontWeight.bold,
               ),
             ),
           )
