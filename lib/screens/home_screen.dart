@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:todo_list_app/main.dart';
 import 'package:todo_list_app/model/kakao_login_model.dart' as kakao;
 import 'package:todo_list_app/model/main_view_model.dart';
+import 'package:todo_list_app/screens/settings_screen.dart';
 import 'package:todo_list_app/widgets/add_todo_dialog_widget.dart';
 
 import '../widgets/completed_list_widget.dart';
@@ -31,7 +32,13 @@ class _HomeScreenState extends State<HomeScreen> {
         title: const Text(MyApp.title),
         actions: [
           IconButton(
-            onPressed: () {},
+            onPressed: () {
+              Navigator.of(context).push(
+                MaterialPageRoute(
+                  builder: (context) => const SettingsScreen(),
+                ),
+              );
+            },
             icon: const Icon(
               Icons.settings,
             ),
