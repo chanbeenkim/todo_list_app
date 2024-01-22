@@ -4,6 +4,8 @@
 
 Todo List를 통해 내가 해야 할 일을 효과적으로 관리할 수 있도록 도와주는 앱입니다.
 
+<img width="1375" alt="todo_list_image" src="https://github.com/chanbeenkim/todo_list_app/assets/118510224/8f411558-b3b9-4035-ad36-9d944cb0a321">
+
 ![todo_image_00](https://github.com/chanbeenkim/mosquito_frequency/assets/118510224/25a1aaab-6d8b-4c7f-a1ea-34d27bd3bd5d)
 
 ![todo_image_09](https://github.com/chanbeenkim/mosquito_frequency/assets/118510224/7d349a88-f4dd-46b2-beab-7d8e14a1feb3)
